@@ -394,8 +394,8 @@ export default function VitisanusLanding() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 text-lg leading-relaxed text-vitisanus-purple">
-              <p className="text-gray-700 leading-relaxed">
-                En <strong className="text-vitisanus-purple">Finca Dinamia</strong>
+              <p className=" leading-relaxed">
+                En <strong className="text-vitisanus-purple">Finca Dinamia </strong>
                 convertimos los <strong>subproductos del viñedo mendocino</strong> en
                 <strong> ingredientes nutritivos</strong> y <strong>sostenibles</strong>.
                 Con un <strong>enfoque boutique</strong>, garantizamos
