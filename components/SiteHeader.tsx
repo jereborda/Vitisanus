@@ -14,6 +14,7 @@ export default function SiteHeader() {
         document.addEventListener("click", onClick)
         return () => document.removeEventListener("click", onClick)
     }, [])
+    
 
     return (
         <header className="sticky top-0 z-50 bg-[#2a1036] shadow-sm border-b border-gray-100">
@@ -93,9 +94,14 @@ export default function SiteHeader() {
 
             {/* Nav móvil */}
             <div
-                className={`md:hidden bg-white border-t border-gray-100 transition-all duration-300 ease-in-out ${mobileMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+                className={`md:hidden bg-white border-t border-gray-100 transition-all duration-300 ease-in-out
+  ${mobileMenuOpen
+                        ? "max-h-[80vh] opacity-100 overflow-y-auto"  // <— más alto + scroll
+                        : "max-h-0 opacity-0 overflow-hidden"
                     }`}
+                    
             >
+                
                 {/* Si tu home usa color sólido (p.ej. #2a1036), cámbialo también aquí y en los hover */}
                 <nav className="container mx-auto px-4 py-4 space-y-3">
                     <a href="/#que-es" className="block text-vitisanus-text hover:text-vitisanus-purple font-medium py-2 hover:bg-vitisanus-cream rounded-lg px-3">
@@ -111,7 +117,7 @@ export default function SiteHeader() {
                         Conseguir
                     </a>
                     <a href="/partner" className="block text-vitisanus-text hover:text-vitisanus-purple font-medium py-2 hover:bg-vitisanus-cream rounded-lg px-3">
-                        Partner
+                        Ser Partner
                     </a>
                 </nav>
             </div>
