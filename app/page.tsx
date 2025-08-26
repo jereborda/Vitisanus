@@ -455,7 +455,9 @@ export default function VitisanusLanding() {
 
                 <div className="p-6">
                   <h3 className="font-chunk text-2xl text-vitisanus-purple mb-2">{r.title}</h3>
-                  <p className="text-vitisanus-text mb-4 leading-relaxed">{r.description}</p>
+                  <p className="hidden md:block text-vitisanus-text mb-4 leading-relaxed">
+                    {r.description}
+                  </p>
                   <div className="flex flex-wrap gap-3">
                     <a href={`/recetas#${r.slug}`} className="btn-effect-3 receta-link" aria-label={`Ver receta completa de ${r.title}`}>
                       Ver receta completa
